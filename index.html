@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>诗中画·画中情 — 混合式教学平台</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- ========== 侧边栏 ========== -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <h1>🏯 诗中画·画中情</h1>
+        <div class="subtitle">初三诗词鉴赏混合式教学平台</div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-item active" data-page="dashboard">
+          <span class="icon">📊</span><span>教学仪表盘</span>
+        </div>
+
+        <div class="nav-section">课前 · 线上导学</div>
+        <div class="nav-item" data-page="micro-video">
+          <span class="icon">🎬</span><span>微视频导学</span>
+        </div>
+        <div class="nav-item" data-page="moments">
+          <span class="icon">💬</span><span>古人的朋友圈</span>
+        </div>
+        <div class="nav-item" data-page="resource-lib">
+          <span class="icon">📚</span><span>意象资源库</span>
+        </div>
+
+        <div class="nav-section">课中 · 线下探究</div>
+        <div class="nav-item" data-page="challenge">
+          <span class="icon">⚔️</span><span>意象组合挑战赛</span>
+        </div>
+        <div class="nav-item" data-page="mindmap">
+          <span class="icon">🗺️</span><span>意象情感地图</span>
+        </div>
+        <div class="nav-item" data-page="practice">
+          <span class="icon">✍️</span><span>诗歌鉴赏实战</span>
+        </div>
+
+        <div class="nav-section">课后 · 线上拓展</div>
+        <div class="nav-item" data-page="homework">
+          <span class="icon">📝</span><span>情感辨析练习</span>
+        </div>
+        <div class="nav-item" data-page="ai-scene">
+          <span class="icon">🎬</span><span>AI意境短片</span>
+        </div>
+        <div class="nav-item" data-page="poster">
+          <span class="icon">🎨</span><span>AI诗词海报</span>
+        </div>
+        <div class="nav-item" data-page="gallery">
+          <span class="icon">🖼️</span><span>班级作品墙</span>
+        </div>
+      </nav>
+      <div class="user-info">
+        <div class="avatar" id="userAvatar">👩‍🏫</div>
+        <div>
+          <div class="name" id="userName">张老师</div>
+          <div class="role" id="userRole">教师端</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ========== 主内容区 ========== -->
+    <main class="main-content" id="mainContent">
+      <!-- 各页面将由 JS 动态渲染 -->
+    </main>
+  </div>
+
+  <!-- ========== Modal容器 ========== -->
+  <div id="modalContainer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/whiteboard.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Fabric.js 协作白板 -->
+  <script src="https://unpkg.com/fabric@5.3.0/dist/fabric.min.js" onerror="console.warn('Fabric.js 加载失败，白板将使用回退模式')"></script>
+  <!-- Socket.IO 实时协作 -->
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" onerror="console.warn('Socket.IO 加载失败，白板将无法实时协作')"></script>
+</body>
+</html>

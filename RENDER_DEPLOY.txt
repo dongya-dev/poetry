@@ -1,0 +1,18 @@
+# ========================================
+# 诗中画·画中情 — Render 部署配置
+# ========================================
+# 将此文件放到 GitHub 仓库根目录，然后在 Render 创建 Web Service
+
+# Build Command（在 Render 控制台设置）:
+#   pip install -r requirements.txt
+#
+# Start Command（在 Render 控制台设置）:
+#   gunicorn -k geventwebsocket.gunicorn.workers.GeventWebSocketWorker -w 1 server:app --bind 0.0.0.0:$PORT
+#
+# 环境变量（在 Render 控制台设置）:
+#   PYTHON_VERSION = 3.10
+#
+# 注意:
+#   - 使用 gevent worker 以支持 Flask-SocketIO 的 WebSocket
+#   - worker 数量设为 1，因为 Socket.IO 需要 sticky session
+#   - PORT 由 Render 自动设置，无需手动配置
